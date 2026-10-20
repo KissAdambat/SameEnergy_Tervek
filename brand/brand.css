@@ -1,0 +1,246 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0b0b0b;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding-top: 76px;
+}
+
+header {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 76px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 clamp(16px, 4vw, 50px);
+  background-color: #0b0b0b;
+  border-bottom: 1px solid #1f1f1f;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: #888888;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #d4af37;
+}
+
+.cart {
+  background-color: #d4af37;
+  color: #0b0b0b;
+  padding: 8px 16px;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.brands-section {
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.brands-header h2 {
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.brands-header p {
+  font-size: 0.75rem;
+  color: #777777;
+  letter-spacing: 1.5px;
+  margin-bottom: 40px;
+}
+
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.brand-card {
+  background-color: #121212;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 1px solid #1f1f1f;
+  min-height: 150px;
+  padding: 35px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.3s ease;
+}
+
+.brand-card:nth-child(1) {
+  background-image: url("logos/nikelogo.jpg");
+}
+
+.brand-card:nth-child(2) {
+  background-image: url("logos/air-jordan-logo.png");
+}
+
+.brand-card:nth-child(3) {
+  background-image: url("logos/rolex-logo.png");
+}
+
+.brand-card:nth-child(4) {
+  background-image: url("logos/loui%20logo.jpg");
+}
+
+.brand-card:nth-child(5) {
+  background-image: url("logos/adidas%20logo.jpg");
+}
+
+.brand-card:nth-child(6) {
+  background-image: url("logos/sameenergy_logo_600x600.jpg");
+}
+
+.brand-card:hover {
+  border-color: #d4af37;
+}
+
+/* FOOTER */
+
+footer {
+background: #0e0e0e;
+text-align: center;
+padding: 35px 20px;
+border-top: 1px solid #222;
+}
+
+footer h2 {
+color: #d4af37;
+font-size: 18px;
+letter-spacing: 4px;
+}
+
+footer p {
+color: #888;
+font-size: 9px;
+letter-spacing: 2px;
+margin-top: 12px;
+}
+
+footer small {
+display: block;
+color: #555;
+font-size: 9px;
+margin-top: 20px;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 120px;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    padding: 12px 16px;
+    height: 120px;
+    align-content: center;
+  }
+
+  .logo {
+    font-size: 13px;
+  }
+
+  nav {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4px 8px;
+    align-items: center;
+  }
+
+  nav a {
+    padding: 4px 0;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 1px;
+    line-height: 1.2;
+  }
+
+  .cart {
+    padding: 8px 12px;
+  }
+
+  .brands-section {
+    padding: 40px 16px;
+  }
+
+  .brands-header h2 {
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+  }
+
+  .brands-header p {
+    margin-bottom: 28px;
+    letter-spacing: 1px;
+  }
+
+  .brands-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .brand-card {
+    min-height: 100px;
+    padding: 20px 10px;
+  }
+
+  footer {
+    padding: 28px 16px;
+  }
+
+  footer h2 {
+    font-size: 16px;
+    letter-spacing: 3px;
+  }
+
+  footer p {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+  }
+}
+
+@media (max-width: 400px) {
+  nav a {
+    font-size: 9px;
+    letter-spacing: 0.6px;
+  }
+}

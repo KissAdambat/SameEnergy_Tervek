@@ -1,0 +1,508 @@
+/* ALAPBEÁLLÍTÁSOK */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #0a0a0a;
+  --surface: #111111;
+  --gold: #d4af37;
+  --gold-hover: #e3bf45;
+  --white: #ffffff;
+  --gray: #858585;
+  --border: #242424;
+}
+
+body {
+  background: var(--background);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  letter-spacing: 1px;
+  padding-top: 76px;
+}
+
+/* LOGIN OLDAL */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 76px 0 0;
+  background: var(--background);
+}
+
+/* BEJELENTKEZÉSI DOBOZ */
+
+.login-box {
+  width: 380px;
+  max-width: 100%;
+  margin: auto;
+  background: var(--background);
+  padding: 42px 36px;
+  text-align: center;
+  border: 1px solid var(--border);
+}
+
+/* LOGÓ */
+
+.login-logo h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.login-logo span {
+  color: var(--white);
+}
+
+.login-logo p {
+  color: var(--gray);
+  font-size: 9px;
+  letter-spacing: 3px;
+  margin-top: 12px;
+  text-transform: uppercase;
+}
+
+/* ELVÁLASZTÓ VONAL */
+
+.line {
+  height: 1px;
+  background: var(--border);
+  margin: 28px 0;
+  border: none;
+}
+
+/* CÍMEK */
+
+.login-box h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.subtitle {
+  color: var(--gray);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  line-height: 1.8;
+  margin: 12px 0 28px;
+}
+
+/* ŰRLAP */
+
+form {
+  text-align: left;
+}
+
+form label {
+  display: block;
+  color: #b0b0b0;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  margin: 18px 0 8px;
+  text-transform: uppercase;
+}
+
+form input {
+  display: block;
+  width: 100%;
+  padding: 13px 14px;
+  background: #0d0d0d;
+  border: 1px solid #303030;
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+form input::placeholder {
+  color: #606060;
+}
+
+form input:focus {
+  border-color: var(--gold);
+}
+
+/* GOMB */
+
+.login-btn {
+  display: block;
+  width: 100%;
+  margin-top: 26px;
+  padding: 15px 12px;
+  background: var(--gold);
+  border: 1px solid var(--gold);
+  color: #080808;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.login-btn:hover {
+  background: var(--gold-hover);
+  border-color: var(--gold-hover);
+}
+
+.login-btn:active {
+  transform: scale(0.99);
+}
+
+/* ALSÓ LINKEK */
+
+.bottom-link {
+  display: inline-block;
+  margin-top: 22px;
+  color: var(--gray);
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.bottom-link:hover {
+  color: var(--gold);
+}
+
+.form-switch {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.form-hint {
+  display: block;
+  margin-top: 8px;
+  color: var(--gray);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+#loginSection[hidden],
+#registerSection[hidden] {
+  display: none;
+}
+
+#loginSection:not([hidden]),
+#registerSection:not([hidden]) {
+  display: block;
+}
+
+/* VISSZAJELZÉS */
+
+#message {
+  margin-top: 16px;
+  font-size: 11px;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  color: var(--gold);
+}
+
+/* FEJLÉC */
+
+header {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(16px, 4vw, 50px);
+  background: var(--background);
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* NAVIGÁCIÓ */
+
+header {
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: #888888;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #d4af37;
+}
+
+.cart {
+  background-color: #d4af37;
+  color: #0b0b0b;
+  padding: 8px 16px;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+/* HERO SZEKCIÓ */
+
+.hero {
+  min-height: 580px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  text-align: center;
+  background: var(--background);
+}
+
+.hero h1 {
+  max-width: 600px;
+  color: var(--gold);
+  font-size: clamp(38px, 5vw, 64px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.hero p {
+  margin-top: 18px;
+  color: #b0b0b0;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* ÁLTALÁNOS GOMBOK */
+
+button,
+.button {
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero .button,
+.hero button {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 14px 30px;
+  background: var(--gold);
+  border: 1px solid var(--gold);
+  color: #080808;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 0.2s ease;
+}
+
+.hero .button:hover,
+.hero button:hover {
+  background: var(--gold-hover);
+}
+
+/* TARTALOM */
+
+.story {
+  padding: 70px 8%;
+  background: var(--background);
+}
+
+.story > p:first-child {
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+/* FOOTER */
+
+footer {
+  width: 100%;
+  background: #0e0e0e;
+  text-align: center;
+  padding: 35px 20px;
+  border-top: 1px solid #222;
+}
+
+footer h2 {
+  color: #d4af37;
+  font-size: 18px;
+  letter-spacing: 4px;
+}
+
+footer p {
+  color: #888;
+  font-size: 9px;
+  letter-spacing: 2px;
+  margin-top: 12px;
+}
+
+footer small {
+  display: block;
+  color: #555;
+  font-size: 9px;
+  margin-top: 20px;
+}
+/* MOBILNÉZET */
+
+@media (max-width: 768px) {
+  .login-page {
+    padding: 120px 0 0;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    padding: 12px 16px;
+    height: 120px;
+    align-content: center;
+  }
+
+  nav {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4px 8px;
+    align-items: center;
+  }
+
+  nav a {
+    padding: 4px 0;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 1px;
+    line-height: 1.2;
+  }
+
+  .logo {
+    font-size: 13px;
+  }
+
+  .cart {
+    padding: 8px 12px;
+  }
+
+  .brand {
+    font-size: 14px;
+  }
+
+  .hero {
+    min-height: 480px;
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+    letter-spacing: 2px;
+  }
+
+  .hero p {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+  }
+
+  .story {
+    padding: 45px 22px;
+  }
+
+  .story > p:first-child {
+    font-size: 10px;
+  }
+
+  .login-box {
+    padding: 32px 24px;
+    margin: 24px auto;
+  }
+
+  form input {
+    font-size: 16px;
+  }
+
+  footer {
+    width: 100%;
+    margin-top: auto;
+    padding: 28px 16px;
+  }
+
+  footer h2 {
+    font-size: 16px;
+    letter-spacing: 3px;
+  }
+
+  footer p {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+  }
+}
+
+@media (max-width: 400px) {
+  nav {
+    gap: 8px;
+  }
+
+  nav a {
+    font-size: 9px;
+    letter-spacing: 0.6px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .login-logo h1 {
+    font-size: 28px;
+  }
+
+  .login-box {
+    width: calc(100% - 32px);
+    padding: 28px 20px;
+  }
+}

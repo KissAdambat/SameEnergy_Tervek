@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | SAMEENERGY</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+
+  <body class="login-page">
+    <header>
+      <div class="logo">SAMEENERGY</div>
+      <nav>
+        <a href="../fooldal/fooldal.html">HOME</a>
+        <a href="../shop/shop.html">SHOP</a>
+        <a href="../brand/brand.html">BRANDS</a>
+        <a href="../rolunk/rolunk.html">ABOUT</a>
+        <a href="../contact/contact.html">CONTACT</a>
+        <a href="../login/login.html" class="active">LOGIN</a>
+      </nav>
+      <div class="cart">CART (<span id="cart-count">0</span>)</div>
+    </header>
+    <div class="login-box">
+      <div class="login-logo">
+        <h1>SAME<br /><span>ENERGY</span></h1>
+        <p>AUTHENTICATED STYLE</p>
+      </div>
+
+      <div class="line"></div>
+
+      <section id="loginSection">
+        <h2>Welcome back</h2>
+        <p class="subtitle">Sign in to your SAMEENERGY account</p>
+
+        <form id="loginForm">
+          <label for="loginEmail">EMAIL ADDRESS</label>
+          <input type="email" id="loginEmail" name="email" autocomplete="email" required />
+
+          <label for="loginPassword">PASSWORD</label>
+          <input type="password" id="loginPassword" name="password" autocomplete="current-password" required />
+
+          <button type="submit" class="login-btn">SIGN IN</button>
+        </form>
+
+        <button type="button" class="bottom-link form-switch" id="showRegister">
+          CREATE AN ACCOUNT
+        </button>
+      </section>
+
+      <section id="registerSection" hidden>
+        <h2>Create account</h2>
+        <p class="subtitle">Join the SAMEENERGY community</p>
+
+        <form id="registerForm">
+          <label for="registerName">NAME</label>
+          <input type="text" id="registerName" name="name" autocomplete="name" required />
+
+          <label for="registerEmail">EMAIL ADDRESS</label>
+          <input type="email" id="registerEmail" name="email" autocomplete="email" required />
+
+          <label for="registerPassword">PASSWORD</label>
+          <input
+            type="password"
+            id="registerPassword"
+            name="password"
+            autocomplete="new-password"
+            minlength="8"
+            aria-describedby="passwordRequirements"
+            required
+          />
+          <small id="passwordRequirements" class="form-hint">
+            Minimum 8 characters, with an uppercase letter, a number and a special character.
+          </small>
+
+          <label for="confirmPassword">CONFIRM PASSWORD</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            autocomplete="new-password"
+            required
+          />
+
+          <button type="submit" class="login-btn">CREATE ACCOUNT</button>
+        </form>
+
+        <button type="button" class="bottom-link form-switch" id="showLogin">
+          BACK TO SIGN IN
+        </button>
+      </section>
+
+      <p id="message" role="status" aria-live="polite"></p>
+
+      <a href="../fooldal/fooldal.html" class="bottom-link">
+        BACK TO WEBSITE
+      </a>
+    </div>
+    <footer>
+      <h2>SAMEENERGY</h2>
+      <p>YOUR DREAMS. OUR ENERGY.</p>
+      <small>EST. 2024</small>
+    </footer>
+    <script src="loginscript.js"></script>
+  </body>
+</html>
