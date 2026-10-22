@@ -1,4 +1,4 @@
-fetch("http://localhost:7181/products/GetAllProducts")
+fetch("https://localhost:7181/products/GetAllProducts")
 .then(response => {
     console.log(response)
     return response.json()
